@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperPass</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="assessment-body">
+        <div class="MB15">
+            <div class="clearfix">
+                <div class="col-1 pull-left">
+                    <div class="assessment-area basic-information">
+                        <h4 data-lang="BasicInformation">Basic Information</h4>
+                        <ul class="papersource-list-group">
+                            <li>
+                                <div data-lang="PaperTitle">Title</div>
+                                <div class="paper-title">Internship Report</div>
+                            </li>
+                            <li>
+                                <div data-lang="PaperTime">Time</div>
+                                <div>2021-12-18 09:24:27&nbsp;(&nbsp;+00:00 UTC&nbsp;)</div>
+                            </li>
+                            <li>
+                                <div data-lang="PaperNumber">Words</div>
+                                <div>3543</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="similar col-2 pull-left">
+                    <div class="assessment-area">
+                        <h4 data-lang="OverallSimilarity">Overall Similarity</h4>
+                        <div class="first-level">
+                            <div class="similar-progress-group">
+                                <span class="similar-type" data-lang="OverallSimilarity">Overall Similarity</span>
+                                <span class="progress gray MR10">
+                                    <span class="progress-bar green" style="width: 7%;"></span>
+                                </span>
+                                <span class="g-font-color green percentage-span">7%</span>
+                            </div>
+                            <div class="second-level">
+                                <div class="similar-progress-group">
+                                    <span class="similar-type" data-lang="LocalLibrarySimilarity">Similarity degrees in local database</span>
+                                    <span class="progress gray MR10">
+                                        <span class="progress-bar green" style="width: 4%;"></span>
+                                    </span>
+                                    <span class="g-font-color green percentage-span">4%</span>
+                                </div>
+                                <div class="similar-progress-group">
+                                    <span class="similar-type" data-lang="InternetSimilarity">Similarity degrees in internet database</span>
+                                    <span class="progress gray MR10">
+                                        <span class="progress-bar green" style="width: 3%;"></span>
+                                    </span>
+                                    <span class="g-font-color green percentage-span">3%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MT20">
+                            <h4 class="g-font-color green" data-lang="SimilarityCalculationFormula">Similarity Calculation Formula</h4>
+                            <p class="font-bold" data-lang="Formula">(Sentence1 similarity + Sentence2 similarity........ / n)</p>
+                            <p>
+                                <span class="MR10" data-lang="SimilarityRange">similarity scale from 0.0~1.0</span>
+                                <span data-lang="SimilarityRangeDetail">Green sentence reprensent similarity-free</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <div class="clearfix">
+                    <h4 class="pull-left" data-lang="SimilarityDistribution">Sentences similarity distribution</h4>
+                    <div class="pull-right flex font-bold">
+                        <div class="distribution">
+                            <span class="distribution-map red"></span>
+                            <span>≥70%</span>
+                        </div>
+                        <div class="distribution">
+                            <span class="distribution-map yellow"></span>
+                            <span>40-70%</span>
+                        </div>
+                        <div class="distribution">
+                            <span class="distribution-map green"></span>
+                            <span><40%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="MB30" style="height:45px;background:gray;" id="barChart"></div>
+                <h4 data-lang="PointDistributionDiagram">Unqualificted sentences dotted distribution map</h4>
+                <div class="" style="height:370px;background:gray;" id="scatterChart"></div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <h4 data-lang="LocalLibrariesTitle">Similar resources on local database</h4>
+                <div data-lang="localTip">Highil similar resources on local has not been founded.</div>                <div class="ExpandCollapse text-center none MT15"><a href="#" class="g-font-color green" data-lang="ExpandAll">Unfold All</a></div>
+            </div>
+        </div>
+        <div class="MB15">
+            <div class="assessment-area">
+                <h4 data-lang="InternetSimilarResources">Similar Resources on Internet</h4>
+                <ul class="source-list decimal PL30 Internet"><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.9%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.9%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://gamingsection.net/news/is-fpga-an-emulation-2/' target="_blank" rel="noopener noreferrer" class="g-font-color black">Is FPGA an emulation? - Gaming Section</a>
+                            </div>
+                            <a href='https://gamingsection.net/news/is-fpga-an-emulation-2/' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.9%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.9%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://blogs.sw.siemens.com/verificationhorizons/product/veloce-prototyping-system/' target="_blank" rel="noopener noreferrer" class="g-font-color black">Veloce Prototyping System Archives | Verification Horizons</a>
+                            </div>
+                            <a href='https://blogs.sw.siemens.com/verificationhorizons/product/veloce-prototyping-system/' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.8%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.8%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://mgtuts.com/autocad/how-do-i-enable-or-disable-hardware-acceleration-in-autocad.html' target="_blank" rel="noopener noreferrer" class="g-font-color black">How do i enable or disable hardware acceleration in autocad?</a>
+                            </div>
+                            <a href='https://mgtuts.com/autocad/how-do-i-enable-or-disable-hardware-acceleration-in-autocad.html' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.8%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.8%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://www.synopsys.com/glossary/what-is-electronic-design-automation.html' target="_blank" rel="noopener noreferrer" class="g-font-color black">What is Electronic Design Automation (EDA)? – How it Works</a>
+                            </div>
+                            <a href='https://www.synopsys.com/glossary/what-is-electronic-design-automation.html' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li><li>
+                        <div class="flex LH32">
+                            <div class="g-font-color green percent-span">0.5%</div>
+                            <div class="progress gray ML10 MR10">
+                                <span class="progress-bar green" style="width: 0.5%;"></span>
+                            </div>
+                            <div class="MR20">
+                                <span class="font-bold paperSource" data-lang="Source">Source</span> <span class="font-bold">:</span>
+                                <span><span data-lang="Internet">Internet</span></span>
+                            </div>
+                            <div class="MR5">
+                                <span class="font-bold" data-lang="Title">Title</span> <span class="font-bold">:</span>
+                                <a href='https://www.cimdata.com/en/news/itemlist/date/2014/en/education?type=rss&start=1980' target="_blank" rel="noopener noreferrer" class="g-font-color black">Items filtered by date: November 2013 - CIMdata</a>
+                            </div>
+                            <a href='https://www.cimdata.com/en/news/itemlist/date/2014/en/education?type=rss&start=1980' target="_blank" class="g-font-color black"><span class="icon iconfont icon-tiaozhuan"></span></a>
+                        </div>
+                    </li></ul>                <div class="ExpandCollapse text-center none MT15"><a href="#" class="g-font-color green" data-lang="ExpandAll">Unfold All</a></div>
+            </div>
+        </div>
+        <div class="paper-footer">
+            <div class="assessment-area">
+                <div data-lang="PaperFooter">This report is powerd by paperpass.net similarity detecting system</div>
+                <div><span data-lang="Copyright">Copyright</span> © 2021 <a href="https://www.paperpass.net/" target="_blank">PaperPass.Net</a></div>
+            </div>
+        </div>
+    </div>
+    <span style="display: none;">This__is__the__place__to__load__the__download__file__code.__The__offline__version__is__hidden,__but__the__online__version__will__have__it.</span>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/Lib.js"></script>
+<script src="js/detaildata.js"></script>
+<script src="js/language.js"></script>
+<script>
+    Report.report_id = '61bda8c6e5ed2gmwu';
+</script>
+<script>
+    (function (System, $) {
+        $(function() {
+            $(document).on('click', '[eve-toggle=btn]', function(event) {
+                var $this = $(this);
+                System.Paper.toggle.call(this, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].PutAway);
+                    $this.addClass('active');
+                }, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].Details);
+                    $this.removeClass('active');
+                });
+            });
+
+            $(document).on('click', '[eve-toggle-btn=close]', function(event) {
+                var $this = $(this).closest('[eve-toggle=warp]').find('[eve-toggle=btn]');
+                System.Paper.toggle.call(this, function() {
+                    $this.addClass('active');
+                }, function() {
+                    $this.find('[eve-toggle="text"]').text(multilingual[leng].Details);
+                    $this.removeClass('active');
+                });
+            });
+
+            if ($(".second-level").find(".third-level").length != 0 && $(".third-level").nextAll().length == 0) {
+                $(".second-level .similar-progress-group:last-child").removeClass("end-node");
+                $(".third-level .similar-progress-group:last-child").addClass("end-node");
+            } else {
+                $(".second-level .similar-progress-group:last-child").addClass("end-node");
+                $(".third-level .similar-progress-group:last-child").removeClass("end-node");
+            }
+            System.operateState.saveId(Report.report_id);
+            parent.postMessage("get_language", "*");
+            var leng = System.operateState.getLanguage(Report.report_id);
+            if (leng != '') {
+                leng = typeof multilingual[leng] == "undefined" ? "English" : leng;
+            } else {
+                leng = typeof multilingual[user_language] == "undefined" ? "English" : user_language;;
+            }
+            window.userLeng = leng;
+            SwitchMultilingual(leng);
+            function SwitchMultilingual(leng) {
+                $('*[data-lang]').each(function () {
+                    var name = $(this).data().lang;
+                    $(this).html(multilingual[leng][name]);
+                });
+            }
+            window.addEventListener("message", function(event) {
+                if (event.data.leng) {
+                    leng = event.data.leng;
+                    SwitchMultilingual(leng);
+                    System.operateState.saveLanguage(Report.report_id, leng);
+                }
+            });
+        });
+    })(Report, jQuery);
+</script>
+<script src="js/echarts.min.js"></script>
+<script>
+    var barChart = echarts.init(document.getElementById('barChart'));
+    var barData = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,82,98,0,0,0,0,100,100,93,100,100,0,0,0,0,54,65,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,56,50,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,58,0,0,0,0,53,0,0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,53,0,0,62,55,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,55,0,0,60,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,55,0,0,0];
+    var barXs = barData.map(function(item,i){
+        return i+1;
+    });
+    barData = barData.map(function (item,i) {
+        if (item < 40){
+            c = "#86c281";
+        }else if (item <70){
+            c = "#e4b55e";
+        }else{
+            c= "#f16d86"
+        }
+        return {value:1,itemStyle:{normal:{color:c,borderWidth:0},emphasis:{color:c}},silent:true,animation:false};
+    });
+    barOption = {
+
+        color: ['#3398DB'],
+        legend:{show:false},
+        silent : false,
+        animation:false,
+        grid: {
+            left:0,
+            right:10,
+            containLabel: false
+        },
+        tooltip:{
+            show:false
+        },
+        axisPointer:{show:false},
+        xAxis : [
+            {
+                type : 'category',
+                data : barXs,
+
+                axisLine:{show:false},
+                splitLine:{show:false}
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                show : false
+            }
+        ],
+        series : [
+            {
+                name:'',
+                type:'bar',
+
+                data:barData,
+                legendHoverLink:false,
+                barGap:0,
+                barCategoryGap:0
+            }
+        ]
+    };
+
+    barChart.setOption(barOption);
+</script>
+<script>
+    $(function () {
+        var scatterChart = echarts.init(document.getElementById('scatterChart'));
+        var scatterData = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,82,98,0,0,0,0,100,100,93,100,100,0,0,0,0,54,65,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,56,50,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,58,0,0,0,0,53,0,0,0,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,53,0,0,62,55,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,55,0,0,60,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,55,0,0,0];
+        var scatterXs = scatterData.map(function(item,i){
+            return i+1;
+        });
+        scatterData = scatterData.map(function (item,i) {
+            c= "#e4b55e";
+            if (item>=70){
+                c="#f16d86";
+            }
+
+            return {value:item,symbolSize:4,itemStyle:{normal:{color:c,opacity:1},emphasis:{color:c}},silent:true,animation:false};
+        });
+
+
+        var scatterOption = {
+            color: ['#3398DB'],
+            legend:{show:false},
+            silent : false,
+            animation:false,
+            grid: {
+
+                right:10,
+                y:10,
+                x:40,
+                show:true,
+                backgroundColor:"#f6f6f6",
+                containLabel: false
+            },
+            tooltip:{
+                show:false
+            },
+            axisPointer:{show:false},
+            xAxis : [
+                {
+                    type : 'category',
+                    data : scatterXs,
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    name:'X-' + multilingual[window.userLeng].Sentence,
+                    nameLocation:'middle',
+                    nameGap:25
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    show : true,
+                    min:35,
+                    max:100,
+                    name:'Y-' + multilingual[window.userLeng].Similarity + '%',
+                    nameLocation:'middle',
+                    nameGap:25
+                }
+            ],
+            series : [
+                {
+
+                    type:'scatter',
+                    symbol:"circle",
+                    data:scatterData,
+                    legendHoverLink:false,
+                    // symbolSize:1130/369
+                }
+            ]
+        };
+
+        scatterChart.setOption(scatterOption);
+
+        $(window).resize(function () {
+            barChart.resize();
+            scatterChart.resize();
+        });
+    })
+</script>
+</html>
